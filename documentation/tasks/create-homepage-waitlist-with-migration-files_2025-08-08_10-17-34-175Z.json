@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Design and Implement Wait List Database Schema and Migration",
+    "description": "Create the database schema and migration files required for the wait list system.",
+    "details": "Design a simple wait list table with fields such as id (primary key), email (unique, required), created_at (timestamp), and status (optional, e.g., pending/confirmed). Use the migration tool compatible with the current stack (e.g., Prisma, Drizzle, or Supabase migration CLI). Ensure the migration is idempotent and can be rolled back. Document the schema and migration process.",
+    "status": "pending",
+    "test_strategy": "Run migration in a test environment; verify table creation, field types, constraints (e.g., unique email), and rollback. Attempt to insert, update, and delete records to ensure schema integrity.",
+    "priority": "high",
+    "ordinal": 0,
+    "task_group_id": "f57d6978-1229-464f-a720-8849dc6b54cb",
+    "parent_task_id": null,
+    "id": "cd01fcdb-68ad-479e-b63b-030c4cb03a22",
+    "created_at": "2025-08-08T10:17:15.496457Z",
+    "user_id": "user_2qXKC3eZTjQJhRR30uDzhnVJfMe",
+    "subtasks": []
+  },
+  {
+    "title": "Develop Wait List Signup Component on Homepage",
+    "description": "Implement a user-facing wait list signup form on the homepage that allows users to join the wait list by submitting their email address.",
+    "details": "Add a React component to the homepage with an email input and submit button. Use React Hook Form and Zod for validation (valid email, required field). On submit, call a Next.js API route to add the email to the wait list database. Display success or error messages (e.g., duplicate email, invalid input). Ensure accessibility and responsive design using Tailwind CSS and shadcn/ui components.",
+    "status": "pending",
+    "test_strategy": "Unit test form validation (invalid/valid emails), integration test form submission (mock API), and UI test for success/error states. Manual test for accessibility and responsiveness.",
+    "priority": "high",
+    "ordinal": 1,
+    "task_group_id": "f57d6978-1229-464f-a720-8849dc6b54cb",
+    "parent_task_id": null,
+    "id": "005ba528-a2ad-4d90-821a-73888145910a",
+    "created_at": "2025-08-08T10:17:15.496499Z",
+    "user_id": "user_2qXKC3eZTjQJhRR30uDzhnVJfMe",
+    "subtasks": []
+  },
+  {
+    "title": "Implement Wait List API Endpoint",
+    "description": "Create a secure Next.js API route to handle wait list submissions from the homepage form.",
+    "details": "Develop an API route (e.g., /api/waitlist) that accepts POST requests with an email payload. Validate input server-side, check for duplicates, and insert new records into the wait list table. Return appropriate HTTP status codes and error messages. Ensure rate limiting and basic spam protection. Log errors for monitoring. Use environment variables for any sensitive configuration.",
+    "status": "pending",
+    "test_strategy": "API integration tests for valid/invalid/duplicate submissions, rate limiting, and error handling. Manual test with frontend integration.",
+    "priority": "high",
+    "ordinal": 2,
+    "task_group_id": "f57d6978-1229-464f-a720-8849dc6b54cb",
+    "parent_task_id": null,
+    "id": "a60a1293-83d0-4dde-a067-96feab5a2e75",
+    "created_at": "2025-08-08T10:17:15.496509Z",
+    "user_id": "user_2qXKC3eZTjQJhRR30uDzhnVJfMe",
+    "subtasks": []
+  },
+  {
+    "title": "Integrate Wait List System with Homepage and Test End-to-End",
+    "description": "Connect the homepage wait list form to the backend API and database, ensuring full end-to-end functionality.",
+    "details": "Wire up the frontend form to the API endpoint. Handle API responses to show user feedback (success, error, duplicate). Test the complete flow: user submits email, API processes and stores it, user receives feedback. Ensure the system is secure, performant, and user-friendly. Document the integration for future reference.",
+    "status": "pending",
+    "test_strategy": "End-to-end test: submit emails via UI, verify database entries, check for proper error handling and user feedback. Regression test after deployment.",
+    "priority": "medium",
+    "ordinal": 3,
+    "task_group_id": "f57d6978-1229-464f-a720-8849dc6b54cb",
+    "parent_task_id": null,
+    "id": "bd7d9608-4de4-4245-91fd-54fa935e3194",
+    "created_at": "2025-08-08T10:17:15.496516Z",
+    "user_id": "user_2qXKC3eZTjQJhRR30uDzhnVJfMe",
+    "subtasks": []
+  }
+]
