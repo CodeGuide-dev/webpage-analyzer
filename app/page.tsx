@@ -9,6 +9,7 @@ import { Download, Loader2, X } from 'lucide-react'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { useLocalStorage } from 'usehooks-ts'
 import { formatDistanceToNow } from 'date-fns'
+import { WaitlistSignup } from '@/components/waitlist-signup'
 
 interface Report {
   url: string
@@ -137,6 +138,10 @@ export default function Home() {
               <AlertDescription>{error}</AlertDescription>
             </Alert>
           )}
+
+          <div className="mt-16 w-full max-w-2xl">
+            <WaitlistSignup />
+          </div>
         </div>
 
         {reports.length > 0 && (
